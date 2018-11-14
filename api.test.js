@@ -1,5 +1,5 @@
 const fetch = require("node-fetch");
-const url = "http://localhost:3000/courses"
+const url = process.env.HEROKU+"courses" || "http://localhost:3000/courses"
 
 test('works with get', async () => {
     expect.assertions(2)
